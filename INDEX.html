@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>test</title>
-<style type="text/css">
-body {
-background-image: url('5qFukvxxCY4.jpg');
-background-repeat: no-repeat;
-background-size: cover;
+<style>
+#myVideo {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+z-index: -1;
 }
-.container {
-width: 80%;
-margin: 0 auto;
-background-color:black; /*фон контейнера (не обязательно)*/
-padding: 50px;
-box-shadow: 0 0 10px rgba(0,0,0,0.3);/*тень для контейнера*/
-}
+</style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+<source src="myVideo.mp4" type="video/mp4">
+</video>
 h1 {
 text-align: center;
 color: #fff;
