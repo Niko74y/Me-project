@@ -1,52 +1,102 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> niko </title>
+        <meta charset="UTF-8" />
+        <title> flame master </title>
         <style>
             body {
                 background-color: #161616;
             }
             .b1 {
-                max-width: 1840px;
-                min-width: 343px;
-                height: 75px;
-                background-color: #383838;
-                margin: 0px 0px 0px 2px;
-                border-radius: 10px;
-                border: 1px solid #c09507;
+                background-color: #272727;
+                min-width: 343px; max-width: 1838px;
+                min-height: 50px; max-height: 75px;
+                border-radius: 15px;
+                border: 1px solid #d69213;
             }
-                .p1 {
-                    font-size: 50px;
-                    margin: 5px 0px 0px 5px;
-                   color: #c09507;
-                }
-            .b2 {
-                width: 250px;
-                height: 373px;
-                background-color: #383838;
-                margin: 20px 0px 0px 2px;
+            .b1-1 {
+                background-color: #272727;
+                min-width: 100px; max-width: 200px;
+                height: 41px;
                 border-radius: 10px;
-                border: 1px solid #c09507;
+                border: 1px solid #d69213;
+                margin: 3px 1px 1px 3px;
+                display: flex;
             }
-                .img1 {
-                    width: 236px;
-                    height: 250px;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                    margin: 5px 5px 5px 5px;
-                    border: 2px solid #c09507;
-                }
+            .p1 {
+                color: #ffc400;
+                font-size: 30px;
+                margin: 2px 0px 0px 13px;
+            }
+			h1 {
+				text-align: center;
+			}
+
+			form {
+				max-width: 400px;
+				margin: 20px auto;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 10px;
+				border: 1px solid #ccc;
+			}
+
+			button {
+				display: block;
+				width: 100%;
+				padding: 10px;
+				background-color: #4CAF50;
+				color: white;
+				border: none;
+				cursor: pointer;
+			}
+
+			button:hover {
+				background-color: #45a049;
+			}
         </style>
     </head>
     <body>
         <div class="b1">
-            <p class="p1"> niko </p>
+            <div class="b1-1">
+                <p class="p1"> Flame Master </p>
+            </div>
         </div>
-        <div class="b2">
-            <img src="https://styleall.ru/wp-content/uploads/2023/02/4eebee67599783.y3jvccwymzyxlde4ndcsntcyldmxnq.jpg" class="img1">
-        </div>
-        <div class="b3">
+		<form id="contact-form">
+			<label for="name">Name</label>
+			<input type="text" id="name" required>
+			
+			<label for="email">Email</label>
+			<input type="email" id="email" required>
+			
+			<label for="message">Message</label>
+			<textarea id="message" required></textarea>
+			
+			<button type="submit">Send Message</button>
+		</form>
+		<script>
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault();
 
-        </div>
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var message = document.getElementById('message').value;
+
+			var smsBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+			var emailLink = 'mailto:nikol4evmiha@gmail.com?subject=New%20Contact%20Form%20Submission&body=' + encodeURIComponent(smsBody);
+
+			window.location.href = emailLink;
+			});
+		</script>
     </body>
 </html>
