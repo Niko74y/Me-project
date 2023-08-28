@@ -2,17 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title> flame master </title>
+        <title> flame master-главная</title>
         <style>
             body {
                 background-color: #161616;
             }
             .b1 {
                 background-color: #272727;
-                min-width: 343px; max-width: 1838px;
-                min-height: 50px; max-height: 75px;
+                min-width: 343px; max-width: 1898px;
+                min-height: 50px;
                 border-radius: 15px;
                 border: 1px solid #d69213;
+				text-align: center;
             }
             .b1-1 {
                 background-color: #272727;
@@ -28,41 +29,31 @@
                 font-size: 30px;
                 margin: 2px 0px 0px 13px;
             }
-			h1 {
-				text-align: center;
-			}
-
-			form {
-				max-width: 400px;
-				margin: 20px auto;
-			}
-
-			label {
-				display: block;
-				margin-bottom: 5px;
-			}
-
-			input,
-			textarea {
-				width: 100%;
-				padding: 10px;
-				margin-bottom: 10px;
-				border: 1px solid #ccc;
-			}
-
-			button {
-				display: block;
-				width: 100%;
-				padding: 10px;
-				background-color: #4CAF50;
-				color: white;
-				border: none;
-				cursor: pointer;
-			}
-
-			button:hover {
-				background-color: #45a049;
-			}
+            .b2 {
+                background-color: #383838;
+                width: 800px;
+                height: 41px;
+                border-radius: 10px;
+                border-left: 2px solid #d69213;
+                border-right: 2px solid #d69213;
+                margin: -42px 1px 1px 550px;
+                display: flex;
+            }
+            a {
+                color: rgb(255, 174, 0);
+                text-decoration:none;
+                font-size: 30px;
+                margin: 0px 55px 0px 55px;
+            }
+            .tavar1 {
+                background-color: #272727;
+                width: 250px;
+                height: 500px;
+                border-radius: 10px;
+                border: 1px solid #d69213;
+                margin: 30px 0px 0px 0px;
+                display: flex;
+            }
         </style>
     </head>
     <body>
@@ -70,33 +61,15 @@
             <div class="b1-1">
                 <p class="p1"> Flame Master </p>
             </div>
+			<div class="b2">
+                <a class="a" href="https://"> главная </a>
+                <a class="a" href="https://"> тавары </a>
+                <a class="a" href="https://"> админы </a>
+                <a class="a" href="https://"> обнов. </a>
+            </div>
         </div>
-		<form id="contact-form">
-			<label for="name">Name</label>
-			<input type="text" id="name" required>
-			
-			<label for="email">Email</label>
-			<input type="email" id="email" required>
-			
-			<label for="message">Message</label>
-			<textarea id="message" required></textarea>
-			
-			<button type="submit">Send Message</button>
-		</form>
-		<script>
-			document.getElementById('contact-form').addEventListener('submit', function(event) {
-			event.preventDefault();
-
-			var name = document.getElementById('name').value;
-			var email = document.getElementById('email').value;
-			var message = document.getElementById('message').value;
-
-			var smsBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-
-			var emailLink = 'mailto:nikol4evmiha@gmail.com?subject=New%20Contact%20Form%20Submission&body=' + encodeURIComponent(smsBody);
-
-			window.location.href = emailLink;
-			});
-		</script>
+        <div class="tavar1">
+            
+        </div>
     </body>
 </html>
