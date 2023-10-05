@@ -5,50 +5,23 @@
     </head>
     <style>
         body {
-            background-color: #161616;
-            min-width: 350px;
+            background-color: yellow;
         }
-        .b1 {
-            background-color: #272727;
-            width: 98px;
-            height: 38px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid purple;
-            margin: 0px 0px auto;
+        video {
+            width:1850;
+            height:900; 
         }
-            .p1 {
-                font-size: 30px;
-                margin: 0px 0px;
-                color: rgb(212, 0, 255);
+        @media screen and (width < 1000px) {
+            video {
+            width:720;
+            height:480; 
             }
-        .b2 {
-            background-color: #272727;
-            width: 98px;
-            height: 668px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid purple;
-            margin: 10px 0px auto; 
         }
-            .p2 {
-                font-size: 20px;
-                margin: 5px 0px;
-                color: rgb(212, 0, 255);
-            }
-                hr {
-                    border: 1px solid purple;
-                    margin: 7px 0px;
-                }
     </style>
     <body>
-        <div class="b1">
-            <p class="p1"> Э-23 </p>
-        </div>
-        <div class="b2">
-            <p class="p2"> куратор </p>
-            <p class="p2"> "зам" </p>
-            <hr>
-        </div>
+        <video controls autoplay>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
     </body>
 </html>
