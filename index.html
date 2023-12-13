@@ -5,9 +5,22 @@
         <link rel="icon" type="images/x-icon" href="Fm.ico">
     </head>
     <style>
+        @keyframes gradient {
+            0% {
+                background-position: 0% 100%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 100%;
+            }
+        }
         body {
             height: 100vh;
             background: linear-gradient(to top left, #272727, green);
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
         }
         .d1 {
             width: 130px;
