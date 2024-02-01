@@ -61,6 +61,25 @@
         </div>
           <div id="countdown"></div>
 
-  <script src="script.js"></script>
+  <script>
+      const targetDate = new Date('January 1, 2023 00:00:00');
+const tz = 'Europe/Moscow';
+
+function countdown() {
+  const now = new Date(new Date().toLocaleString('en-US', {timeZone: tz}));
+  const difference = targetDate - now;
+
+  const seconds = Math.floor(difference / 1000) % 60;
+  const minutes = Math.floor(difference / 1000 / 60) % 60;
+  const hours = Math.floor(difference / 1000 / 60 / 60) % 24;
+  const days = Math.floor(difference / 1000 / 60 / 60 / 24);
+
+  document.getElementById('countdown').innerHTML = `${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
+
+  setTimeout(countdown, 1000);
+}
+
+countdown();
+  </script>
     </body>
 </html>
