@@ -90,9 +90,9 @@ function countdown() {
   const minutes = Math.floor(difference / 1000 / 60) % 60;
   const hours = Math.floor(difference / 1000 / 60 / 60) % 24;
   const days = Math.floor(difference / 1000 / 60 / 60 / 24);
-
-  document.getElementById('countdown').innerHTML = `${days} дней-, ${hours} часов-, ${minutes} минут-, ${seconds} секунд-`;
-
+    
+  document.getElementById('countdown').innerHTML = `${Math.abs(days)} дней, ${Math.abs(hours)} часов, ${Math.abs(minutes)} минут, ${Math.abs(seconds)} секунд`;
+    
   setTimeout(countdown, 1000);
 }
 
