@@ -63,19 +63,7 @@
             position: fixed;
             margin: 125px 0px;
             display: flex;
-         }
-        .image-container {
-  width: 700px;
-  height: 700px;
-  overflow: scroll;
-  margin:5px auto 5px auto;        
-}
-
-.img {
-  max-width: 200%;
-  max-height: 200%;
-}
-
+        }
     </style>
     <body>
         <div class="d1">
@@ -91,26 +79,5 @@
                 команда
             </a>
         </div>
-        
-        <div class="image-container">
-          <img src="QR.jpg" alt="Image">
-        </div>
-    
-    <script>
-        // Обработка события масштабирования
-document.querySelector('.image-container').addEventListener('wheel', (e) => {
-  // Изменение масштаба изображения
-  const scale = e.deltaY > 0 ? 1.1 : 0.9;
-  document.querySelector('img').style.transform = `scale(${scale})`;
-});
-
-// Обработка события прокрутки
-document.querySelector('.image-container').addEventListener('scroll', (e) => {
-  // Изменение положения изображения
-  const x = e.target.scrollLeft;
-  const y = e.target.scrollTop;
-  document.querySelector('img').style.transform = `translateX(-${x}px) translateY(-${y}px)`;
-});
-    </script>
     </body>
 </html>
