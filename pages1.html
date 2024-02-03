@@ -54,40 +54,10 @@
             margin: 5px auto 5px auto;
             text-decoration: none;
         }   
-        .one {
-  width:100px;
-  height:50px;
-  text-align: center;
-  padding: 20px;
-  margin: 20px auto 5px auto;
-  background-color: #383838;
-        }
     </style>
     <body>
         <div class="d1">
             <p class="p1"> Niko </p>
         </div>
-        <div class="one"></div>
-<script>
-function generateRandomNumber() {
-  return Math.floor(Math.random() * 101);
-}
-
-function showRandomNumber() {
-  var randomNumber = generateRandomNumber();
-
-  $(".one").text(randomNumber).fadeIn(500);
-
-  setTimeout(function() {
-    $(".one").fadeOut(500);
-  }, 10000);
-
-  setTimeout(showRandomNumber, 90000);
-}
-
-$(document).ready(function() {
-  showRandomNumber();
-});
-</script>
     </body>
 </html>
