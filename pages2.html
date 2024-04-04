@@ -2,15 +2,45 @@
 <html>
   <head>
     <title> . . . </title>
-  </head>
+  </head>                                                                  
+  <script src="https://threejs.org/build/three.js"></script>
+  <script src="https://threejs.org/examples/js/loaders/FBXLoader.js"></script>
   <style>
-    body {
-      width: 75vh;
-      height: 100vh;
-      color: #161616;
-    }
+    
   </style>
   <body>
-    
+<div id="container"></div>
+
+  <script>
+  const container = document.getElementById('container');
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer();
+
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  const loader = new THREE.FBXLoader();
+
+  loader.load(
+      'cherep.fbx',
+      function (object) {
+          scene.add(object);
+      },
+      undefined,
+      function (error) {
+          console.error(error);
+      }
+  );
+
+  camera.position.z = 5;
+
+  function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+  }
+
+  animate();
+  </script>
   </body>
 </html>
