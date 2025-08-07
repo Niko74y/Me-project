@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Music Player</title>
+    <link rel="icon" type="images/x-icon" href="icons.ico">
+    <link rel="stylesheet" href="modern_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <h1>MusicApp</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Поиск</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Ваша библиотека</a></li>
+                </ul>
+            </nav>
+            <div class="playlists">
+                <h3>Плейлисты</h3>
+                <ul>
+                    <li><a href="#">Плейлист 1</a></li>
+                    <li><a href="#">Плейлист 2</a></li>
+                    <li><a href="#">Плейлист 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div class="user-actions">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h2>Рекомендуем для вас</h2>
+                    <div class="cards-container">
+                        <!-- Рекомендуемые треки будут здесь -->
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Новые релизы</h2>
+                    <div class="cards-container">
+                        <!-- Новые релизы будут здесь -->
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Популярные плейлисты</h2>
+                    <div class="cards-container">
+                        <!-- Популярные плейлисты будут здесь -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="player-controls">
+            <div class="song-info">
+                <img src="https://via.placeholder.com/50" alt="Album cover" class="album-cover">
+                <div class="song-details">
+                    <span class="song-title">Название трека</span>
+                    <span class="song-artist">Исполнитель</span>
+                </div>
+            </div>
+            <div class="player-buttons">
+                <button class="player-btn"><i class="fas fa-step-backward"></i></button>
+                <button class="player-btn play-pause"><i class="fas fa-play"></i></button>
+                <button class="player-btn"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <div class="player-progress">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span class="current-time">0:00</span>
+                    <span class="duration">3:30</span>
+                </div>
+            </div>
+            <div class="player-volume">
+                <button class="player-btn"><i class="fas fa-volume-up"></i></button>
+                <div class="volume-bar">
+                    <div class="volume-level"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="modern_script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
